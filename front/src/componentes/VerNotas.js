@@ -14,6 +14,11 @@ export const VerNotas = () => {
     setNotas(response.data)
   }
 
+  const borrarNota = async (id) =>{
+    await axios.delete(`${endpoint}/notas/${id}`)
+    getNotas()
+  }
+
   return (
   <div className="mx-5">
     <Link to={"/crear"} className="btn btn-primary mt-4 mb-2">Nueva nota</Link>
@@ -27,8 +32,10 @@ export const VerNotas = () => {
             <tr key={nota.id} >
                 <td>{nota.titulo}</td>
                 <td>{nota.contenido}</td>
+                <td style={{width:"10%"}}><button onClick={() => borrarNota(nota.id)}>Borrar</button></td>
             </tr>
         ))}
+        
         </tbody> 
     </table>
   </div>
