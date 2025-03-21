@@ -54,7 +54,7 @@ class NotasController extends Controller
      */
     public function destroy(string $id)
     {
-        $nota = Nota::destroy($id);
+        $nota = Notas::destroy($id);
         return $nota;
     }
 }
