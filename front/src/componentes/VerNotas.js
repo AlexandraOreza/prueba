@@ -25,8 +25,8 @@ export const VerNotas = () => {
        <tbody>
         { notas.map ((nota) => (
             <tr key={nota.id} >
-                <td className="text-break">{nota.titulo}</td>
-                <td className="text-break">{nota.contenido}</td>
+                <td>{nota.titulo}</td>
+                <td>{nota.contenido}</td>
             </tr>
         ))}
         </tbody> 
