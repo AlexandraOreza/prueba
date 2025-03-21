@@ -10,10 +10,10 @@ Validación de datos: Se asegura que cada nota tenga un título y que el conteni
 - Composer: Para gestionar las dependencias de PHP.
 - Node.js: Versión 12 o superior.
 - npm: Gestor de paquetes de Node.js.
-- MySQL: Para la base de datos.
+- XAMPP: Para la base de datos.
 
 ## Instalacion
-1. Clona el repositorio:
+1. Clona el repositorio en la carpeta htdocs/dashboard de xampp:
 ```javascript
 git clone https://github.com/AlexandraOreza/prueba.git
 cd prueba
@@ -40,21 +40,23 @@ DB_USERNAME=root
 
 DB_PASSWORD=
 
-3. Migra la base de datos:
+3. Enciende el modulo de Apache y MySql en el panel de control de XAMPP
+
+4. Migra la base de datos:
 ```
 php artisan migrate
 ```
-4. Inicial el servidor en laravel:
+5. Inicial el servidor en laravel:
 ```
 php artisan serve
 ```
 
-5. Instala dependencias de Node.js:
+6. Instala dependencias de Node.js:
 ```
 cd ../front
 npm install
 ```
-6. Inicia la aplicacion:
+7. Inicia la aplicacion:
 ```
 npm start
 ```
